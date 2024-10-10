@@ -4,7 +4,8 @@
     "description": "- `npm init -y`\r - `npm install -D tailwindcss postcss autoprefixer vite`\r - `npx tailwindcss init -p`\r - create your own css file and keep the following code:\r   - `@tailwind base;`\r   - `@tailwind components;`\r   - `@tailwind utilities;`\r - `npm run start`\r - click the link: <http://localhost:5173/>",
     "main": "index.js",
     "scripts": {
-        "start": "vite"
+        "start": "vite",
+        "build": "vite build"
     },
     "keywords": [],
     "author": "",
