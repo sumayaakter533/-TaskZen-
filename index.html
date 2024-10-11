@@ -41,7 +41,8 @@
                     </div>
                     <div class="px-4 pr-0 mt-2 flex flex-col gap-1 font-inter">
                         <div
-                            class="hover:bg-base-200 hover:text-deep-navy transition-all ease-linear duration-300 rounded-md p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            id="today-btn"
+                            class="cursor-pointer hover:bg-base-200 hover:text-deep-navy transition-all ease-linear duration-300 rounded-md p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
                             <p>
                                 <i class="fa-solid fa-list mr-2"></i>
                                 Today
@@ -178,7 +179,7 @@
 
         <main class="bg-soft-gray col-span-9 p-8">
             <!-- ANCHOR: Dashboard part -->
-            <div class="heading p-6">
+            <div id="dashboard-section" class="heading p-6">
                 <h1 class="text-deep-navy text-5xl font-poppins">
                     Welcome to TaskZen!
                 </h1>
@@ -195,10 +196,10 @@
                 </p>
             </div>
             <!-- ANCHOR: Today part -->
-            <div id="today" class="hidden">
+            <div id="today-section" class="hidden">
                 <div
                     class="heading text-deep-navy font-poppins font-bold flex gap-4">
-                    <h1 class="text-5xl">Today</h1>
+                    <p class="text-5xl">Today</p>
                     <span
                         class="badge border-slate-blue bg-soft-gray rounded-lg text-lg h-8"
                         >5</span
@@ -242,6 +243,10 @@
                 </div>
             </div>
         </main>
+
+        <!-- LINK: js file links -->
+        <script src="./js/assets.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>
 
