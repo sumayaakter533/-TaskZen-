@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,241 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <!-- LINK: tailwind.css -->
         <link rel="stylesheet" href="./css/tailwind.css" />
+        <!-- LINK: font-awesome cdn -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     </head>
-    <body>
-        <h1 class="text-6xl text-purple-950">Welcome to TaskZen</h1>
+    <body class="grid grid-cols-12">
+        <header class="p-10 col-span-3 bg-deep-navy h-screen overflow-auto">
+            <nav>
+                <!-- ANCHOR: Logo & Menu part -->
+                <div
+                    class="nav-start flex justify-between items-center mb-4 text-soft-gray">
+                    <h3 class="text-3xl font-semibold font-poppins">TaskZen</h3>
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </div>
+
+                <!-- ANCHOR: Search part -->
+                <label
+                    class="input flex items-center gap-2 text-soft-gray bg-transparent p-0">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                    <input
+                        type="text"
+                        class="grow font-inter"
+                        placeholder="Search" />
+                </label>
+
+                <!-- ANCHOR: Tasks part -->
+                <div class="tasks mt-8">
+                    <div
+                        class="text-base font-medium text-soft-gray font-poppins uppercase">
+                        Tasks
+                    </div>
+                    <div class="px-4 pr-0 mt-2 flex flex-col gap-1 font-inter">
+                        <div
+                            class="hover:bg-base-200 hover:text-deep-navy transition-all ease-linear duration-300 rounded-md p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p>
+                                <i class="fa-solid fa-list mr-2"></i>
+                                Today
+                            </p>
+                            <span
+                                class="badge rounded-full bg-base-200 w-auto h-auto"
+                                >5</span
+                            >
+                        </div>
+                        <div
+                            class="hover:bg-base-200 hover:text-deep-navy transition-all ease-linear duration-300 rounded-md p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p>
+                                <i class="fa-solid fa-forward mr-2"></i>
+                                Upcoming
+                            </p>
+                            <span
+                                class="badge rounded-full bg-base-200 w-auto h-auto"
+                                >12</span
+                            >
+                        </div>
+                        <div
+                            class="hover:bg-base-200 hover:text-deep-navy transition-all ease-linear duration-300 rounded-md p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p>
+                                <i class="fa-solid fa-calendar-days mr-2"></i>
+                                Calender
+                            </p>
+                        </div>
+                        <div
+                            class="hover:bg-base-200 hover:text-deep-navy transition-all ease-linear duration-300 rounded-md p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p>
+                                <i class="fa-solid fa-note-sticky mr-2"></i>
+                                Sticky Wall
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANCHOR: Lists part -->
+                <div class="lists mt-8">
+                    <div
+                        class="text-base font-medium text-soft-gray uppercase font-poppins">
+                        Lists
+                    </div>
+                    <div class="px-4 pr-0 mt-2 flex flex-col gap-1 font-inter">
+                        <!-- <div
+                            class="p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p class="">
+                                <i
+                                    class="text-steel-blue fa-solid fa-stop mr-2"></i>
+                                Personal
+                            </p>
+                            <span
+                                class="badge rounded-full bg-base-200 w-auto h-auto"
+                                >5</span
+                            >
+                        </div>
+                        <div
+                            class="p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p>
+                                <i
+                                    class="text-steel-blue fa-solid fa-stop mr-2"></i>
+                                Work
+                            </p>
+                            <span
+                                class="badge rounded-full bg-base-200 w-auto h-auto"
+                                >12</span
+                            >
+                        </div>
+                        <div
+                            class="p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p>
+                                <i
+                                    class="text-steel-blue fa-solid fa-stop mr-2"></i>
+                                List1
+                            </p>
+                        </div> -->
+                        <div
+                            class="p-2 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                            <p>
+                                Add New List
+                                <i class="fa-solid fa-plus ml-2"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ANCHOR: Tags part -->
+                <div class="tags mt-8 pb-10">
+                    <div
+                        class="text-base font-medium text-soft-gray uppercase font-poppins">
+                        Tags
+                    </div>
+
+                    <!-- <div
+                        class="px-4 pr-0 mt-2 grid grid-cols-3 gap-2 font-inter">
+                        <kbd class="kbd kbd-md bg-steel-blue text-soft-gray">
+                            Tag1
+                        </kbd>
+                        <kbd class="kbd kbd-md bg-steel-blue text-soft-gray">
+                            Tag2
+                        </kbd>
+                        <kbd class="kbd kbd-md bg-steel-blue text-soft-gray">
+                            Tag3
+                        </kbd>
+                    </div> -->
+
+                    <div
+                        class="p-4 pr-0 flex justify-between items-center text-soft-gray font-medium text-sm">
+                        <p class="pl-2">
+                            Add New Tag
+                            <i class="fa-solid fa-plus ml-2"></i>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ANCHOR: Settings and Logout part  -->
+                <div class="nav-end mt-10 relative">
+                    <a
+                        href="#"
+                        class="p-2 pr-0 flex items-center text-soft-gray font-medium text-sm">
+                        <i class="fa-solid fa-sliders mr-2"></i>
+                        Settings
+                    </a>
+
+                    <a
+                        href="#"
+                        class="p-2 pr-0 flex items-center text-soft-gray font-medium text-sm">
+                        <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i>
+                        Logout
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="bg-soft-gray col-span-9 p-8">
+            <!-- ANCHOR: Dashboard part -->
+            <div class="heading p-6">
+                <h1 class="text-deep-navy text-5xl font-poppins">
+                    Welcome to TaskZen!
+                </h1>
+                <p class="text-steel-blue pt-6">
+                    This is a todo web application for you. Please enjoy. Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Error,
+                    adipisci? Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Ad deleniti eum facilis similique molestiae accusamus
+                    nisi sunt quod autem omnis. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Error, adipisci? Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Ad deleniti eum
+                    facilis similique molestiae accusamus nisi sunt quod autem
+                    omnis.
+                </p>
+            </div>
+            <!-- ANCHOR: Today part -->
+            <div id="today" class="hidden">
+                <div
+                    class="heading text-deep-navy font-poppins font-bold flex gap-4">
+                    <h1 class="text-5xl">Today</h1>
+                    <span
+                        class="badge border-slate-blue bg-soft-gray rounded-lg text-lg h-8"
+                        >5</span
+                    >
+                </div>
+                <div class="inner-content mt-8">
+                    <div class="p-2 pr-0 font-medium text-sm flex flex-col">
+                        <div
+                            class="border-t pl-0 p-2 flex justify-between items-center border-slate-blue">
+                            <p class="text-steel-blue">
+                                <input type="checkbox" class="mr-2" />
+                                Task1
+                            </p>
+                            <i class="fa-solid fa-angle-right ml-2"></i>
+                        </div>
+                        <div
+                            class="border-t pl-0 p-2 flex justify-between items-center border-slate-blue">
+                            <p class="text-steel-blue">
+                                <input type="checkbox" class="mr-2" />
+                                Task2
+                            </p>
+                            <i class="fa-solid fa-angle-right ml-2"></i>
+                        </div>
+                        <div
+                            class="border-t pl-0 p-2 flex justify-between items-center border-slate-blue">
+                            <p class="text-steel-blue">
+                                <input type="checkbox" class="mr-2" />
+                                Complete taskzen
+                            </p>
+                            <i class="fa-solid fa-angle-right ml-2"></i>
+                        </div>
+                        <label
+                            class="border-y pl-0 p-2 flex justify-between items-center border-slate-blue">
+                            <input
+                                type="text"
+                                placeholder="Add New Task"
+                                class="bg-transparent w-full" />
+                            <i class="fa-solid fa-plus"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
+
+<!-- text-deep-navy hover:bg-slate-blue -->
